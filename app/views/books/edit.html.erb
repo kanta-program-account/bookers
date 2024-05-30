@@ -1,19 +1,26 @@
 <div class="edit-container">
   <h1>Editing Book</h1>
   <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f|%>
-        <label>
-          Title
-          <%= f.text_field :title %>
-        </label>
+  <label>
+    Title
+    <span class = "input"><%= f.text_field :title, class:"text_field text" %></span>
+  </label>
+  
+  <label>
+    Body
+    <span class = "input"><%= f.text_area :body, class:"text_area text" %></span>
+  </label>
+  
+  <span class = 'input'><%= f.submit 'Update Book', class:"submit_button" %></span>
         
-        <label>
-          Body
-          <%= f.text_area :body %>
-        </label>
-        
-        <%= f.submit 'Update Book' %>
-    <% end %>
+  <% end %>
+    <div class = "show_back">
+      <a href = <%= book_path(@book.id) %>>Show</a>
+      <span> | </span>
+      <a href = "/books">Back</a>
+    </div>
     
-    <a href = <%= book_path(@book.id) %>>Show</a>
-    <a href = "/books">Back</a>
 </div>
+
+
+        

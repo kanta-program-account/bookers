@@ -1,6 +1,7 @@
 <div class="show-container">
-    <p><strong>Title:</strong><%= @book.title %></p>
-    <p><strong>Body:</strong><%= @book.body %></p>
+    <p><strong>Title: </strong><%= @book.title %></p>
+    <p><strong>Body: </strong><%= @book.body %></p>
     <a href = <%= edit_book_path(@book.id) %>>Edit</a>
+    <span> | </span>
     <a href = "/books">Back</a>
 </div>

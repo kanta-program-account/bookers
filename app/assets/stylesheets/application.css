@@ -20,3 +20,38 @@
   /*box-sizing: border-box;*/
   background-color: #fff;
 }
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+a{
+  color: #000;
+}
+
+.link {
+  color: #000;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: #fff;
+  background-color:#000;
+}
+
+.link:visited {
+  color: #666;
+}
+
+.link:hover {
+  color: #fff;
+  background-color:#000;
+}
