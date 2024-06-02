@@ -22,11 +22,32 @@
 
 <div class="new-container">
     <h1>New book</h1>
+    <% if @book.errors.any? %>
+    <div class="error-explanation">
+        <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+        <div class="error-details">
+            <ul>
+                <% @book.errors.full_messages.each do |message| %>
+                <li class = "error-message"><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+    <% end %>
+    
     <%= form_with model: @book, url: '/books', method: :post do |f|%>
-        <label>
-          Title
-          <span class = "input"><%= f.text_field :title, class:"text_field text" %></span>
+    
+    <% if @book.title == "" %>
+        <label class = "error-label">
+          <span>Title</span>
+          <span class = "input error-span"><%= f.text_field :title, class:"text_field text" %></span>
         </label>
+    <% else %>
+        <label>
+          <span>Title</span>
+          <span class = "input"><%= f.text_field :title, class:"text_field text", id:"text_field_area" %></span>
+        </label>
+    <% end %>
         
         <label>
           Body

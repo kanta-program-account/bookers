@@ -18,7 +18,6 @@
   margin: 0;
   padding: 0;
   /*box-sizing: border-box;*/
-  background-color: #fff;
 }
 
 body {
@@ -60,3 +59,36 @@ a:hover {
   color: green;
   margin: 33px;
 }
+
+.error-explanation {
+  border: 2px solid red;
+  padding: 7px 7px 0 7px;
+  background-color: #F0F0F0;
+  margin-bottom: 20px;
+}
+
+.error-explanation > h2 {
+  font-size: 12px;
+  padding: 5px 5px 5px 15px;
+  margin: -7px -7px 0 -7px;
+  background-color: #CC0000;
+  color: #FFFFFF;
+}
+
+.error-details > ul {
+  padding-left: 40px;
+  margin: 33px;
+}
+
+.error-message {
+  font-size: 12px;
+}
+
+/*.error-label > span{*/
+/*  background-color: #FF0000;*/
+/*}*/
+
+/*#text_field_area {*/
+/*  padding: 2px;*/
+/*  background-color: #FF0000;*/
+/*}*/
